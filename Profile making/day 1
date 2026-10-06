@@ -1,0 +1,1084 @@
+# 🌐 WEB DEVELOPMENT — DAY 1
+# HTML BASICS + MY FIRST PERSONAL WEBSITE
+
+---
+
+## 🎯 DAY 1 GOAL
+
+Today I learned the basics of HTML and created my first personal website.
+
+### Project:
+My First Personal Website
+
+### Technologies:
+- HTML5
+- VS Code
+- Google Chrome
+
+---
+
+# 1. 🌐 WHAT IS WEB DEVELOPMENT?
+
+Web development means creating websites and web applications.
+
+The three main technologies are:
+
+HTML       → Structure 🧱
+CSS        → Design 🎨
+JavaScript → Behaviour / Interactivity ⚙️
+
+### Real-Life Example
+
+Think about a house:
+
+HTML       → Walls, rooms, doors
+CSS        → Paint, furniture, decoration
+JavaScript → Lights, switches, actions
+
+So remember:
+
+HTML       → What is on the webpage?
+CSS        → How does it look?
+JavaScript → How does it work?
+
+---
+
+# 2. 🧱 WHAT IS HTML?
+
+HTML stands for:
+
+HyperText Markup Language
+
+HTML is a markup language, not a programming language.
+
+HTML is used to create the structure and content of webpages.
+
+Example:
+
+<h1>Hello World</h1>
+
+The browser reads this and displays:
+
+Hello World
+
+---
+
+# 3. 🏗️ BASIC HTML STRUCTURE
+
+A basic HTML document looks like this:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>My Website</title>
+</head>
+
+<body>
+
+    <h1>Hello World</h1>
+
+</body>
+
+</html>
+
+### Structure:
+
+HTML
+│
+├── HEAD
+│   └── TITLE
+│
+└── BODY
+    └── H1
+
+---
+
+# 4. <!DOCTYPE html>
+
+Syntax:
+
+<!DOCTYPE html>
+
+Purpose:
+
+It tells the browser that the document uses HTML5.
+
+Important:
+
+It is a declaration, not a normal HTML element.
+
+### Tip:
+
+Always start a normal HTML5 page with:
+
+<!DOCTYPE html>
+
+---
+
+# 5. <html>
+
+Syntax:
+
+<html>
+
+</html>
+
+Purpose:
+
+<html> is the root element of the webpage.
+
+Almost all HTML content is written inside <html>.
+
+---
+
+# 6. <head>
+
+Syntax:
+
+<head>
+
+</head>
+
+Purpose:
+
+<head> contains information about the webpage.
+
+Examples:
+
+- Page title
+- CSS
+- Metadata
+- External files
+
+Most content inside <head> is not directly visible on the webpage.
+
+---
+
+# 7. <title>
+
+Syntax:
+
+<title>My First Website</title>
+
+Purpose:
+
+<title> controls the text shown in the browser tab.
+
+Example:
+
+<title>My Portfolio</title>
+
+Browser tab:
+
+My Portfolio
+
+### Important Difference
+
+<title>My Portfolio</title>
+
+→ Browser tab
+
+<h1>My Portfolio</h1>
+
+→ Visible webpage
+
+---
+
+# 8. <body>
+
+Syntax:
+
+<body>
+
+    Website content
+
+</body>
+
+Purpose:
+
+<body> contains the content visible to the user.
+
+Examples:
+
+- Headings
+- Paragraphs
+- Images
+- Links
+- Lists
+- Forms
+- Buttons
+
+---
+
+# 9. 📝 HEADINGS
+
+HTML provides six heading levels:
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+Common structure:
+
+<h1> → Main topic
+<h2> → Section
+<h3> → Subsection
+<h4> → Smaller subsection
+<h5>
+<h6>
+
+Example:
+
+<h1>My Portfolio</h1>
+
+<h2>About Me</h2>
+
+<h2>My Skills</h2>
+
+<h3>Programming Skills</h3>
+
+### Important Tip:
+
+Do not use <h1>, <h2>, etc. only because you want bigger text.
+
+Headings should represent the structure of your content.
+
+CSS will later control the size and appearance.
+
+---
+
+# 10. 📝 PARAGRAPH <p>
+
+Syntax:
+
+<p>This is my first website.</p>
+
+Purpose:
+
+<p> is used to create a paragraph.
+
+Example:
+
+<h2>About Me</h2>
+
+<p>
+    I am a CSE student and I am learning Web Development.
+</p>
+
+---
+
+# 11. 📋 UNORDERED LIST <ul>
+
+An unordered list creates bullet points.
+
+Example:
+
+<ul>
+    <li>Java</li>
+    <li>SQL</li>
+    <li>DSA</li>
+    <li>HTML</li>
+</ul>
+
+Output:
+
+• Java
+• SQL
+• DSA
+• HTML
+
+### Remember:
+
+<ul> → Unordered List
+<li> → List Item
+
+### Memory Trick:
+
+UL = Unordered List = Bullets
+
+---
+
+# 12. 🔢 ORDERED LIST <ol>
+
+An ordered list creates numbered items.
+
+Example:
+
+<ol>
+    <li>Learn HTML</li>
+    <li>Learn CSS</li>
+    <li>Learn JavaScript</li>
+</ol>
+
+Output:
+
+1. Learn HTML
+2. Learn CSS
+3. Learn JavaScript
+
+### Memory Trick:
+
+OL = Ordered List = Numbers
+
+---
+
+# 13. 🔗 LINKS <a>
+
+HTML uses <a> to create links.
+
+Basic syntax:
+
+<a href="https://github.com/">My GitHub</a>
+
+### Parts:
+
+<a>       → Creates a link
+href      → Destination
+Text      → Clickable text
+
+General syntax:
+
+<a href="URL">Clickable Text</a>
+
+Example:
+
+<a href="https://www.google.com">Google</a>
+
+---
+
+# 14. 🔗 target="_blank"
+
+To open a link in a new browser tab:
+
+<a href="https://github.com/" target="_blank">
+    My GitHub
+</a>
+
+Meaning:
+
+target="_blank"
+
+→ Open the link in a new tab.
+
+### Best Practice:
+
+For external links:
+
+<a href="https://github.com/"
+   target="_blank"
+   rel="noopener noreferrer">
+    My GitHub
+</a>
+
+rel="noopener noreferrer" is a useful security best practice when opening external links in a new tab.
+
+---
+
+# 15. 🖼️ IMAGES <img>
+
+Images are added using:
+
+<img src="myphoto.jpg" alt="My Profile Photo">
+
+### Important Attributes:
+
+src → Image location
+alt → Alternative text
+
+Example:
+
+<img src="myphoto.jpg" alt="My Profile Photo">
+
+### Important:
+
+<img> does not need a closing </img> tag.
+
+---
+
+# 16. 📁 FILE PATHS
+
+File paths are very important in web development.
+
+Suppose the folder is:
+
+Day1
+│
+├── index.html
+└── myphoto.jpg
+
+Then:
+
+<img src="myphoto.jpg">
+
+means:
+
+"Look for myphoto.jpg in the same folder as index.html."
+
+---
+
+## Image inside another folder
+
+Folder:
+
+Day1
+│
+├── index.html
+└── images
+    └── myphoto.jpg
+
+Then:
+
+<img src="images/myphoto.jpg">
+
+### Common mistakes:
+
+myphoto.jpg
+MyPhoto.jpg
+myphoto.jpeg
+myphoto.jpg.jpg
+
+These are different filenames.
+
+Always check the exact filename and extension.
+
+---
+
+# 17. ↩️ <br> — LINE BREAK
+
+<br> moves content to the next line.
+
+Example:
+
+<p>
+    I am a CSE student.<br>
+    I am learning Web Development.<br>
+    I am building projects.
+</p>
+
+Output:
+
+I am a CSE student.
+I am learning Web Development.
+I am building projects.
+
+### Memory Trick:
+
+br = Break the line
+
+---
+
+# 18. ➖ <hr> — HORIZONTAL LINE
+
+<hr> creates a horizontal line.
+
+Example:
+
+<h2>About Me</h2>
+
+<p>I am learning Web Development.</p>
+
+<hr>
+
+<h2>My Skills</h2>
+
+Output:
+
+About Me
+
+I am learning Web Development.
+
+------------------------------
+
+My Skills
+
+### Memory Trick:
+
+hr = Horizontal Rule
+
+---
+
+# 19. ⚠️ WHY DID WE USE <br><br>?
+
+Example:
+
+<br><br>
+
+One <br>:
+
+Name: [________]
+Email: [________]
+
+Two <br>:
+
+Name: [________]
+
+
+Email: [________]
+
+So:
+
+<br><br>
+
+creates an extra blank line.
+
+### Important:
+
+In professional websites, CSS should normally control spacing.
+
+We should not use many <br> tags just to create spacing.
+
+We will learn proper spacing using CSS.
+
+---
+
+# 20. 🏷️ <label>
+
+<label> tells the user what an input field is for.
+
+Example:
+
+<label>Name:</label>
+<input type="text">
+
+Output:
+
+Name: [____________]
+
+---
+
+# 21. ⌨️ <input>
+
+<input> creates a field where the user can enter information.
+
+### Text Input:
+
+<input type="text">
+
+### Email Input:
+
+<input type="email">
+
+The email input tells the browser that the field is intended for an email address.
+
+Other input types will be learned later.
+
+---
+
+# 22. 🔘 <button>
+
+Creates a button.
+
+Example:
+
+<button>Submit</button>
+
+Output:
+
+[Submit]
+
+### Important:
+
+Our button does not actually submit data yet.
+
+To make a real working form, we will later learn:
+
+HTML Forms
+JavaScript
+Backend
+Database
+
+---
+
+# 23. 🧩 DAY 1 PROJECT
+
+## Project Name:
+
+My First Personal Website
+
+### Website Structure:
+
+My Name
+    ↓
+Web Development Introduction
+    ↓
+About Me
+    ↓
+My Photo
+    ↓
+My Skills
+    ↓
+My GitHub
+    ↓
+Contact Me
+
+---
+
+# 24. 💻 COMPLETE DAY 1 PROJECT CODE
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>My First Website</title>
+</head>
+
+<body>
+
+    <h1>My Name is Nikitha</h1>
+
+    <h2>I am learning Web Development</h2>
+
+    <p>This is my first Website.</p>
+
+    <h2>About Me</h2>
+
+    <p>
+        I am a CSE Student.<br>
+        I am learning Web Development.<br>
+        I want to create my own websites.
+    </p>
+
+    <img src="myphoto.jpg" alt="My Profile Photo">
+
+    <hr>
+
+    <h2>My Skills</h2>
+
+    <ul>
+        <li>Java</li>
+        <li>SQL</li>
+        <li>DSA</li>
+        <li>HTML</li>
+    </ul>
+
+    <h2>My Links</h2>
+
+    <a href="https://github.com/"
+       target="_blank"
+       rel="noopener noreferrer">
+        My GitHub
+    </a>
+
+    <hr>
+
+    <h2>Contact Me</h2>
+
+    <label>Name:</label>
+    <input type="text">
+
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email">
+
+    <br><br>
+
+    <button>Submit</button>
+
+</body>
+
+</html>
+
+---
+
+# 25. 📁 PROJECT FOLDER STRUCTURE
+
+Web Development
+│
+└── Day1
+    │
+    ├── index.html
+    └── myphoto.jpg
+
+---
+
+# 26. ▶️ HOW TO RUN HTML
+
+HTML does not need a compiler like Java.
+
+Workflow:
+
+Write HTML in VS Code
+        ↓
+Ctrl + S
+        ↓
+Open index.html in Chrome
+        ↓
+Press F5 / Refresh
+        ↓
+See the webpage
+
+Later we will use Live Server to make this process easier.
+
+---
+
+# 27. 🛠️ COMMON BEGINNER MISTAKES
+
+## Mistake 1: Image not showing
+
+Check:
+
+<img src="myphoto.jpg">
+
+Then check that the image actually exists in the correct folder.
+
+---
+
+## Mistake 2: Wrong filename
+
+HTML:
+
+<img src="myphoto.jpg">
+
+Actual file:
+
+MyPhoto.JPG
+
+These may not match.
+
+Always check:
+
+- Filename
+- Extension
+- Folder
+- Spelling
+
+---
+
+## Mistake 3: Forgetting to save
+
+Use:
+
+Ctrl + S
+
+Then refresh the browser:
+
+F5
+
+---
+
+## Mistake 4: Missing < or >
+
+Correct:
+
+<h1>Hello</h1>
+
+Incorrect:
+
+h1>Hello/h1>
+
+Remember:
+
+<  → Opening symbol
+>  → Closing symbol
+/  → Closing tag
+
+---
+
+## Mistake 5: Using too many <br>
+
+Avoid:
+
+<br><br><br><br><br>
+
+for spacing.
+
+Use CSS for proper spacing.
+
+---
+
+# 28. 💡 HTML TIPS & TRICKS
+
+### Tip 1: Understand instead of memorizing
+
+Do not try to memorize every HTML tag.
+
+Ask:
+
+1. What does this tag do?
+2. Why am I using it?
+3. Where should I use it?
+
+---
+
+### Tip 2: Change the code yourself
+
+Instead of only writing:
+
+<h1>My Name is Nikitha</h1>
+
+try:
+
+<h1>Welcome to My Website</h1>
+
+Then:
+
+<h1>My Portfolio</h1>
+
+This helps build understanding.
+
+---
+
+### Tip 3: Use indentation
+
+Good:
+
+<body>
+
+    <h1>Hello</h1>
+
+    <p>Hello World</p>
+
+</body>
+
+Avoid writing everything on one line.
+
+---
+
+### Tip 4: Understand parent and child elements
+
+Example:
+
+<ul>
+    <li>Java</li>
+    <li>SQL</li>
+</ul>
+
+Think:
+
+ul
+├── li
+└── li
+
+This becomes very useful when learning CSS and JavaScript.
+
+---
+
+### Tip 5: File paths are extremely important
+
+Many beginner web-development problems come from:
+
+- Wrong filename
+- Wrong folder
+- Wrong path
+- Wrong extension
+
+Always check these first when something does not work.
+
+---
+
+# 29. 🎤 INTERVIEW QUESTIONS
+
+## Q1. What is HTML?
+
+HTML stands for HyperText Markup Language. It is used to create the structure and content of webpages.
+
+## Q2. Is HTML a programming language?
+
+No. HTML is a markup language, not a programming language.
+
+## Q3. What is <!DOCTYPE html>?
+
+It tells the browser that the document uses HTML5.
+
+## Q4. Difference between <head> and <body>?
+
+<head> contains information about the webpage, while <body> contains the content displayed to the user.
+
+## Q5. Difference between <h1> and <p>?
+
+<h1> is used for a main heading, while <p> is used for a paragraph.
+
+## Q6. What is href?
+
+href specifies the destination of a hyperlink.
+
+## Q7. What is src?
+
+src specifies the source/location of an external resource such as an image.
+
+## Q8. What is alt?
+
+alt provides alternative text for an image. It is useful when an image cannot be displayed and also helps accessibility.
+
+## Q9. Difference between <ul> and <ol>?
+
+<ul> creates an unordered/bullet list.
+
+<ol> creates an ordered/numbered list.
+
+## Q10. What does target="_blank" do?
+
+It opens the link in a new browser tab/window.
+
+---
+
+# 30. 🧪 DAY 1 PRACTICE CHALLENGE
+
+Create a new section called:
+
+My Goals
+
+Add these as bullet points:
+
+- Become a good software developer
+- Build my own websites
+- Get a good job
+- Improve my coding skills
+
+Try to create it yourself using the concepts learned today.
+
+Do not immediately look for the answer.
+
+Think:
+
+Heading → Which tag?
+Bullet list → Which tag?
+Each bullet → Which tag?
+
+---
+
+# 31. 🧠 WHAT I LEARNED TODAY
+
+I learned:
+
+[✓] What Web Development is
+[✓] What HTML is
+[✓] HTML5
+[✓] <!DOCTYPE html>
+[✓] <html>
+[✓] <head>
+[✓] <title>
+[✓] <body>
+[✓] <h1> to <h6>
+[✓] <p>
+[✓] <ul>
+[✓] <ol>
+[✓] <li>
+[✓] <a>
+[✓] href
+[✓] target="_blank"
+[✓] rel="noopener noreferrer"
+[✓] <img>
+[✓] src
+[✓] alt
+[✓] File paths
+[✓] <br>
+[✓] <hr>
+[✓] <label>
+[✓] <input>
+[✓] <button>
+[✓] How to run HTML
+[✓] Basic debugging
+[✓] Built my first personal website
+
+---
+
+# 32. 🏆 DAY 1 COMPLETION
+
+Day: 1
+
+Topic: HTML Basics
+
+Project: My First Personal Website
+
+Technology: HTML5
+
+Editor: VS Code
+
+Browser: Google Chrome
+
+Status: COMPLETED ✅
+
+---
+
+# 🚀 NEXT: DAY 2
+
+## CSS BASICS
+
+In Day 2, I will learn:
+
+- What is CSS?
+- Why do we need CSS?
+- CSS syntax
+- Selectors
+- Colors
+- Background colors
+- Font size
+- Text alignment
+- Borders
+- Width
+- Height
+- Margin
+- Padding
+- Styling my existing personal website
+
+### Learning Method:
+
+Learn
+↓
+Understand
+↓
+Code
+↓
+Apply to project
+↓
+Practice
+↓
+Debug
+↓
+Update GitHub
+↓
+Next concept
+
+---
+
+# ⭐ MY WEB DEVELOPMENT RULE
+
+I should not just copy code.
+
+For every concept:
+
+1. Understand it.
+2. Type it myself.
+3. Change something.
+4. See what happens.
+5. Make mistakes.
+6. Debug the mistakes.
+7. Use the concept in my project.
+
+This will help me become someone who can create websites independently, not someone who only copies projects.
+
+---
+
+# 🔥 FINAL GOAL
+
+My goal is not just to learn HTML, CSS and JavaScript.
+
+My goal is:
+
+IDEA
+↓
+DESIGN
+↓
+HTML
+↓
+CSS
+↓
+JavaScript
+↓
+React
+↓
+Backend
+↓
+SQL
+↓
+Deployment
+↓
+MY OWN WEBSITE 🌐
