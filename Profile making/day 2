@@ -1,0 +1,1258 @@
+Absolutely 👍 Here is your **complete Day 2 GitHub Notes** in **ONE single copyable block**.  
+Copy everything inside the block at once and save it as `Day02-Notes.md`.
+
+```markdown
+# 🚀 Day 2 — CSS Fundamentals + Flexbox
+
+## 📅 Day 2 Goal
+
+Today I learned how to style an HTML website using CSS and how to create layouts using Flexbox.
+
+### Main goals
+
+- Understand CSS
+- Learn CSS selectors
+- Style text and backgrounds
+- Understand the Box Model
+- Learn padding and margin
+- Learn borders and border-radius
+- Learn Flexbox
+- Center elements
+- Use gap and flex-wrap
+- Add shadows and hover effects
+- Understand external CSS
+- Build a styled Profile Website
+
+---
+
+# 1. What is CSS?
+
+CSS stands for:
+
+**Cascading Style Sheets**
+
+CSS is used to control the **appearance and design** of HTML elements.
+
+HTML = Structure  
+CSS = Design  
+JavaScript = Behavior
+
+Example:
+
+HTML:
+
+    <h1>My Profile</h1>
+
+CSS:
+
+    h1 {
+        color: blue;
+    }
+
+Output:
+
+    My Profile
+    ↑
+    Blue color
+
+---
+
+# 2. CSS Syntax
+
+Basic CSS syntax:
+
+    selector {
+        property: value;
+    }
+
+Example:
+
+    h1 {
+        color: blue;
+        font-size: 30px;
+    }
+
+### Meaning
+
+- `h1` → selector
+- `color` → property
+- `blue` → value
+- `font-size` → property
+- `30px` → value
+
+Think:
+
+    What do I want to style?
+            ↓
+         selector
+            ↓
+    What do I want to change?
+            ↓
+         property
+            ↓
+    What value do I want?
+            ↓
+          value
+
+---
+
+# 3. CSS Selectors
+
+## Element Selector
+
+Selects all elements of that type.
+
+    p {
+        color: purple;
+    }
+
+This affects every `<p>` element.
+
+---
+
+## Class Selector
+
+A class starts with `.` in CSS.
+
+HTML:
+
+    <div class="card">
+        My Profile
+    </div>
+
+CSS:
+
+    .card {
+        background-color: ivory;
+    }
+
+### Remember
+
+HTML:
+
+    class="card"
+
+CSS:
+
+    .card
+
+---
+
+## ID Selector
+
+An ID starts with `#`.
+
+HTML:
+
+    <h1 id="title">My Website</h1>
+
+CSS:
+
+    #title {
+        color: blue;
+    }
+
+---
+
+# 4. Basic CSS Properties
+
+## color
+
+Changes text color.
+
+    h1 {
+        color: red;
+    }
+
+---
+
+## background-color
+
+Changes the background color.
+
+    .card {
+        background-color: ivory;
+    }
+
+---
+
+## font-size
+
+Changes text size.
+
+    p {
+        font-size: 20px;
+    }
+
+---
+
+## text-align
+
+Controls text alignment.
+
+    h1 {
+        text-align: center;
+    }
+
+Common values:
+
+    left
+    center
+    right
+
+---
+
+# 5. Border
+
+The `border` property creates a border around an element.
+
+    border: 2px solid black;
+
+Meaning:
+
+    2px   → thickness
+    solid → border style
+    black → border color
+
+Example:
+
+    .box {
+        border: 2px solid grey;
+    }
+
+---
+
+# 6. Border Radius
+
+`border-radius` makes corners rounded.
+
+    border-radius: 15px;
+
+Example:
+
+    .card {
+        border-radius: 30px;
+    }
+
+Higher value → more rounded corners.
+
+---
+
+# 7. Padding
+
+Padding is the space **inside an element**, between the content and border.
+
+    padding: 20px;
+
+Think:
+
+    ┌──────────────────────┐
+    │      PADDING         │
+    │   ┌──────────────┐   │
+    │   │   CONTENT    │   │
+    │   └──────────────┘   │
+    │      PADDING         │
+    └──────────────────────┘
+
+Example:
+
+    .card {
+        padding: 30px 50px;
+    }
+
+Two-value shorthand:
+
+    padding: 30px 50px;
+
+means:
+
+    Top/Bottom    = 30px
+    Left/Right    = 50px
+
+---
+
+# 8. Margin
+
+Margin is the space **outside an element**.
+
+    margin: 20px;
+
+Example:
+
+    .card {
+        margin: 20px auto;
+    }
+
+Two values:
+
+    margin: 20px auto;
+
+means:
+
+    Top/Bottom = 20px
+    Left/Right = auto
+
+`auto` can be used to center a block element horizontally when it has a defined width.
+
+---
+
+# 9. Padding vs Margin
+
+Very important:
+
+    Padding → inside the element
+    Margin  → outside the element
+
+Easy memory trick:
+
+    PADDING = Personal space inside
+    MARGIN  = Space between elements
+
+---
+
+# 10. CSS Box Model
+
+Every HTML element can be understood as a box.
+
+    Content
+       ↓
+    Padding
+       ↓
+    Border
+       ↓
+    Margin
+
+Diagram:
+
+    ┌─────────────────────────────┐
+    │           MARGIN            │
+    │   ┌─────────────────────┐   │
+    │   │       BORDER        │   │
+    │   │  ┌───────────────┐  │   │
+    │   │  │    PADDING    │  │   │
+    │   │  │ ┌───────────┐ │  │   │
+    │   │  │ │  CONTENT  │ │  │   │
+    │   │  │ └───────────┘ │  │   │
+    │   │  └───────────────┘  │   │
+    │   └─────────────────────┘   │
+    └─────────────────────────────┘
+
+---
+
+# 11. Width
+
+Controls the width of an element.
+
+    width: 400px;
+
+Example:
+
+    .card {
+        width: 400px;
+    }
+
+---
+
+# 12. box-sizing
+
+A useful CSS property:
+
+    box-sizing: border-box;
+
+It makes the declared width include:
+
+    content + padding + border
+
+A common professional CSS reset is:
+
+    * {
+        box-sizing: border-box;
+    }
+
+This makes sizing easier to control.
+
+---
+
+# 13. Flexbox
+
+Flexbox is used to arrange elements in a row or column.
+
+To start Flexbox:
+
+    display: flex;
+
+Example:
+
+    .container {
+        display: flex;
+    }
+
+Without Flexbox:
+
+    Java
+    SQL
+    HTML
+    DSA
+
+With Flexbox:
+
+    Java   SQL   HTML   DSA
+
+---
+
+# 14. flex-direction
+
+Controls the direction of Flexbox items.
+
+## Row
+
+    flex-direction: row;
+
+Output:
+
+    Java   SQL   HTML   DSA
+
+Default direction is usually `row`.
+
+## Column
+
+    flex-direction: column;
+
+Output:
+
+    Java
+      ↓
+    SQL
+      ↓
+    HTML
+      ↓
+    DSA
+
+---
+
+# 15. Flexbox Axes
+
+This is VERY important.
+
+For:
+
+    flex-direction: row;
+
+The axes are:
+
+    Main axis   → horizontal
+    Cross axis  ↓ vertical
+
+For:
+
+    flex-direction: column;
+
+The axes change:
+
+    Main axis   ↓ vertical
+    Cross axis  → horizontal
+
+### Golden rule
+
+    justify-content → Main axis
+    align-items     → Cross axis
+
+This rule remains true even when the direction changes.
+
+---
+
+# 16. justify-content
+
+Controls the position of Flexbox items on the **main axis**.
+
+Example:
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+For a row:
+
+    Java   SQL   HTML   DSA
+              ↑
+            center
+
+Common values:
+
+    flex-start
+    center
+    flex-end
+    space-between
+    space-around
+    space-evenly
+
+---
+
+# 17. align-items
+
+Controls the position of Flexbox items on the **cross axis**.
+
+Example:
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+For a row:
+
+    justify-content → horizontal
+    align-items     → vertical
+
+Remember:
+
+    JUSTIFY = Main axis
+    ALIGN   = Cross axis
+
+---
+
+# 18. gap
+
+`gap` controls the space between Flexbox items.
+
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+
+Output:
+
+    Java ←20px→ SQL ←20px→ HTML
+
+### Important difference
+
+    margin  → space around an element
+    padding → space inside an element
+    gap     → space between Flexbox/Grid items
+
+---
+
+# 19. flex-wrap
+
+By default, Flexbox tries to keep items on one line.
+
+    flex-wrap: nowrap;
+
+If the screen becomes smaller, items can become crowded.
+
+Use:
+
+    flex-wrap: wrap;
+
+Then items can move to another row.
+
+Example:
+
+    Java   SQL   HTML   CSS   JavaScript
+    React  Python DSA   Git
+
+### Remember
+
+    nowrap → stay on one line
+    wrap   → move to another line when needed
+
+This is important for responsive websites.
+
+---
+
+# 20. box-shadow
+
+Adds a shadow around an element.
+
+Example:
+
+    box-shadow: 0 4px 10px gray;
+
+Meaning:
+
+    0    → horizontal movement
+    4px  → vertical movement
+    10px → blur
+    gray → shadow color
+
+Example:
+
+    .card {
+        box-shadow: 0 4px 10px gray;
+    }
+
+This makes cards look more modern.
+
+---
+
+# 21. :hover
+
+`:hover` applies CSS when the mouse moves over an element.
+
+Example:
+
+    .box:hover {
+        background-color: lightskyblue;
+    }
+
+Normal:
+
+    ┌─────────┐
+    │  Java   │
+    └─────────┘
+
+Mouse over:
+
+    ┌─────────┐
+    │  Java   │  ← changes
+    └─────────┘
+
+---
+
+# 22. transform: scale()
+
+Used to make an element slightly bigger or smaller.
+
+Example:
+
+    transform: scale(1.05);
+
+`1` = normal size
+
+`1.05` = slightly bigger
+
+Example:
+
+    .box:hover {
+        transform: scale(1.05);
+    }
+
+This gives a small interactive effect.
+
+---
+
+# 23. text-decoration
+
+Used to add decorations to text.
+
+Underline:
+
+    text-decoration: underline;
+
+No underline:
+
+    text-decoration: none;
+
+Strike through:
+
+    text-decoration: line-through;
+
+Example:
+
+    .section-title {
+        text-decoration: underline;
+    }
+
+---
+
+# 24. Why Classes Are Useful
+
+Suppose we have:
+
+    <h2>Kothamekala Nikitha</h2>
+
+and:
+
+    <h2 class="section-title">My Skills</h2>
+
+If we write:
+
+    h2 {
+        text-decoration: underline;
+    }
+
+BOTH headings get underlined.
+
+Instead:
+
+    .section-title {
+        text-decoration: underline;
+    }
+
+Only `My Skills` gets the underline.
+
+### Lesson
+
+Use an element selector when you want to style many elements.
+
+Use a class when you want specific elements to have special styling.
+
+---
+
+# 25. Internal CSS vs External CSS
+
+## Internal CSS
+
+CSS is written inside `<style>`.
+
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+
+Useful for small experiments.
+
+---
+
+## External CSS
+
+CSS is placed in a separate file.
+
+Folder:
+
+    Day2/
+    ├── index.html
+    └── style.css
+
+HTML:
+
+    <link rel="stylesheet" href="style.css">
+
+CSS goes inside:
+
+    style.css
+
+### Why external CSS is better
+
+- Cleaner HTML
+- Easier maintenance
+- Can reuse CSS
+- Better organization
+- Standard approach for real projects
+
+---
+
+# 26. Important External CSS Rule
+
+In `index.html`:
+
+    <link rel="stylesheet" href="style.css">
+
+In `style.css`:
+
+    h1 {
+        color: blue;
+    }
+
+DO NOT put:
+
+    <style>
+    </style>
+
+inside `style.css`.
+
+CSS file contains CSS only.
+
+---
+
+# 27. Day 2 Project
+
+## My Profile Website — CSS Version
+
+The project contains:
+
+- Profile heading
+- Profile card
+- Name
+- Course
+- Web development message
+- Skills section
+- Flexbox skill layout
+- Shadows
+- Rounded corners
+- Hover effects
+- External CSS
+
+---
+
+# 28. Final Folder Structure
+
+    Web Development/
+    │
+    └── Day2/
+        ├── index.html
+        └── style.css
+
+---
+
+# 29. Final index.html
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Day-2 CSS</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+
+        <body>
+
+            <h1 class="main-title">My Profile</h1>
+
+            <div class="card">
+
+                <h2>Kothamekala Nikitha</h2>
+
+                <p>CSE Student</p>
+
+                <p>I am learning Web Development.</p>
+
+            </div>
+
+            <h2 class="section-title">My Skills</h2>
+
+            <div class="container">
+
+                <div class="box">Java</div>
+                <div class="box">SQL</div>
+                <div class="box">HTML</div>
+                <div class="box">DSA</div>
+                <div class="box">CSS</div>
+                <div class="box">JavaScript</div>
+                <div class="box">React</div>
+                <div class="box">Python</div>
+
+            </div>
+
+        </body>
+    </html>
+
+---
+
+# 30. Final style.css
+
+    * {
+        box-sizing: border-box;
+    }
+
+    h1 {
+        color: blue;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    h2 {
+        color: darkred;
+        text-align: center;
+    }
+
+    .section-title {
+        text-decoration: underline;
+    }
+
+    p {
+        color: purple;
+        font-size: 20px;
+        text-align: center;
+        background-color: lightyellow;
+        border: 2px solid black;
+    }
+
+    .card {
+        background-color: ivory;
+        border: 2px solid black;
+        padding: 30px 50px;
+        margin: 20px auto;
+        width: 400px;
+        border-radius: 30px;
+        box-shadow: 0 4px 10px gray;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        border: 2px solid grey;
+        padding: 20px;
+        background-color: moccasin;
+        box-shadow: 0 2px 5px lightgoldenrodyellow;
+        border-radius: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .box:hover {
+        background-color: lightskyblue;
+        transform: scale(1.05);
+    }
+
+---
+
+# 31. How the Final Project Works
+
+    index.html
+          ↓
+    Contains structure
+          ↓
+    <link>
+          ↓
+    style.css
+          ↓
+    Adds design
+          ↓
+    Browser
+          ↓
+    Final Website
+
+---
+
+# 32. Common Mistakes I Made
+
+## Mistake 1 — Wrong CSS unit
+
+Wrong:
+
+    gap: 20x;
+
+Correct:
+
+    gap: 20px;
+
+---
+
+## Mistake 2 — Missing semicolon
+
+Wrong:
+
+    padding: 20px
+
+Correct:
+
+    padding: 20px;
+
+---
+
+## Mistake 3 — Putting heading inside Flexbox container
+
+If we write:
+
+    <div class="container">
+        <h2>My Skills</h2>
+        <div class="box">Java</div>
+    </div>
+
+`My Skills` becomes a Flexbox item.
+
+Better:
+
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="container">
+        <div class="box">Java</div>
+    </div>
+
+The heading stays separate from the Flexbox items.
+
+---
+
+## Mistake 4 — Forgetting the CSS file
+
+If HTML contains:
+
+    <link rel="stylesheet" href="style.css">
+
+but `style.css` doesn't exist, the styling won't appear.
+
+Correct folder:
+
+    Day2/
+    ├── index.html
+    └── style.css
+
+---
+
+## Mistake 5 — Putting HTML tags inside CSS
+
+Wrong:
+
+    <style>
+        ...
+    </style>
+
+inside `style.css`.
+
+Correct:
+
+    h1 {
+        color: blue;
+    }
+
+---
+
+# 33. Useful Memory Tricks
+
+### CSS
+
+    HTML = Structure
+    CSS  = Style
+    JS   = Behavior
+
+### Box Model
+
+    Content
+       ↓
+    Padding
+       ↓
+    Border
+       ↓
+    Margin
+
+### Flexbox
+
+    display: flex
+        ↓
+    flex-direction
+        ↓
+    justify-content
+        ↓
+    align-items
+        ↓
+    gap
+        ↓
+    flex-wrap
+
+### Axes
+
+For row:
+
+    justify-content → horizontal
+    align-items     → vertical
+
+For column:
+
+    justify-content → vertical
+    align-items     → horizontal
+
+### Easy memory
+
+    JUSTIFY = MAIN
+    ALIGN   = CROSS
+
+---
+
+# 34. Important CSS Properties Learned
+
+    color
+    background-color
+    font-size
+    text-align
+    text-decoration
+    border
+    border-radius
+    padding
+    margin
+    width
+    box-shadow
+    box-sizing
+    display
+    flex-direction
+    justify-content
+    align-items
+    gap
+    flex-wrap
+    transform
+
+---
+
+# 35. Interview Questions
+
+## Q1. What is CSS?
+
+CSS stands for Cascading Style Sheets. It is used to style and design HTML elements.
+
+---
+
+## Q2. What is the difference between HTML and CSS?
+
+HTML creates the structure of a webpage.
+
+CSS controls its appearance and layout.
+
+---
+
+## Q3. What is the CSS Box Model?
+
+The CSS Box Model consists of:
+
+    Content
+    Padding
+    Border
+    Margin
+
+---
+
+## Q4. Difference between padding and margin?
+
+Padding is the space inside an element.
+
+Margin is the space outside an element.
+
+---
+
+## Q5. What is Flexbox?
+
+Flexbox is a CSS layout system used to arrange elements in rows or columns.
+
+---
+
+## Q6. What does `display: flex` do?
+
+It makes an element a Flexbox container and allows its children to be arranged using Flexbox properties.
+
+---
+
+## Q7. What does `justify-content` do?
+
+It aligns Flexbox items along the main axis.
+
+---
+
+## Q8. What does `align-items` do?
+
+It aligns Flexbox items along the cross axis.
+
+---
+
+## Q9. What is `gap`?
+
+`gap` creates space between Flexbox or Grid items.
+
+---
+
+## Q10. What is `flex-wrap`?
+
+It allows Flexbox items to move to another line when there isn't enough space.
+
+---
+
+## Q11. What is `:hover`?
+
+`:hover` applies CSS when the mouse pointer is over an element.
+
+---
+
+## Q12. Why use external CSS?
+
+External CSS keeps HTML and CSS separate, making projects cleaner, reusable, and easier to maintain.
+
+---
+
+# 36. Day 2 Practice Challenge
+
+Without copying the final solution, try adding these yourself:
+
+1. Change the profile card background.
+2. Change the skill box colors.
+3. Change the border-radius.
+4. Change the shadow.
+5. Change the hover color.
+6. Add one more skill.
+7. Make the skill boxes slightly larger.
+8. Try `justify-content: space-evenly`.
+9. Try `justify-content: space-between`.
+10. Try `flex-direction: column` and observe what changes.
+
+---
+
+# 37. Debugging Checklist
+
+If CSS doesn't work:
+
+    1. Check filename:
+       style.css
+
+    2. Check HTML link:
+       <link rel="stylesheet" href="style.css">
+
+    3. Make sure both files are in the same folder.
+
+    4. Check spelling.
+
+    5. Check `{ }`.
+
+    6. Check `;`.
+
+    7. Save with Ctrl + S.
+
+    8. Refresh browser with F5.
+
+---
+
+# 38. What I Understand After Day 2
+
+I can now:
+
+- Create HTML structure.
+- Add CSS styling.
+- Use element selectors.
+- Use class selectors.
+- Understand the Box Model.
+- Use padding and margin.
+- Add borders and rounded corners.
+- Add shadows.
+- Center Flexbox items.
+- Change Flexbox direction.
+- Control spacing with gap.
+- Make layouts wrap.
+- Add hover effects.
+- Use transform.
+- Connect external CSS.
+- Build a basic styled profile webpage.
+
+---
+
+# 🏆 DAY 2 COMPLETED
+
+## Project
+
+**My Profile — CSS Version**
+
+## Main Skills Learned
+
+HTML + CSS + Flexbox
+
+## Most Important Concepts
+
+    CSS
+    Selectors
+    Box Model
+    Padding
+    Margin
+    Flexbox
+    justify-content
+    align-items
+    flex-direction
+    gap
+    flex-wrap
+    box-shadow
+    :hover
+    External CSS
+
+## ⭐ Most Important Rule to Remember
+
+    justify-content → MAIN AXIS
+    align-items     → CROSS AXIS
+
+## 🚀 Next
+
+Day 3 will continue CSS with more practical website design and responsive concepts.
+
+**Day 2 = COMPLETED ✅**
+```
